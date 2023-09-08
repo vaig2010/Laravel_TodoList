@@ -5,7 +5,7 @@
         <div class="col-sm-offset-2 col-sm-8">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    New Task
+                    <h2>New Task</h2>
                 </div>
 
                 <div class="panel-body">
@@ -28,9 +28,7 @@
                         <!-- Add Task Button -->
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-6">
-                                <button type="submit" class="btn btn-default">
-                                    <i class="fa fa-btn fa-plus"></i>Add Task
-                                </button>
+                                <button class="btn btn-primary" type="submit">Add Task</button>
                             </div>
                         </div>
                     </form>
@@ -41,7 +39,7 @@
             @if (count($tasks) > 0)
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        Current Tasks
+                        <h2>Current Tasks</h2>
                     </div>
 
                     <div class="panel-body">

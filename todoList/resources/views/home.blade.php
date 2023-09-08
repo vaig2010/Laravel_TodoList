@@ -14,10 +14,13 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    <p>You are logged in!</p>
+                    <p>Go to <a href="{{ url('/tasks') }}">Tasks</a></p>
                 </div>
             </div>
         </div>
     </div>
 </div>
 @endsection
+
+
