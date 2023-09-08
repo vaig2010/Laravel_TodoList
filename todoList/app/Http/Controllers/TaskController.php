@@ -14,20 +14,24 @@ use App\Http\Controllers\Controller;
 class TaskController extends Controller
 {
     protected $tasks;
-    public function forUser(User $user)
-    {
-        return Task::where('user_id', $user->id)
-            ->orderBy('created_at', 'asc')
-            ->get();
-    }
-    public function __construct()
+//
+//    public function forUser(User $user)
+//    {
+//        return Task::where('user_id', $user->id)
+//            ->orderBy('created_at', 'asc')
+//            ->get();
+//    }
+    public function __construct(TaskRepository $tasks)
     {
         $this->middleware('auth');
+
+        $this->tasks = $tasks;
     }
+
     public function index(Request $request)
     {
         return view('index', [
-            'tasks' => $this->forUser($request->user()),
+            'tasks' => $this->tasks->forUser($request->user()),
         ]);
     }
 
