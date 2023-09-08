@@ -20,14 +20,14 @@
                         <div class="form-group">
                             <label for="task-name" class="col-sm-3 control-label">Task</label>
 
-                            <div class="col-sm-6">
+                            <div class="col-sm-6 mb-2">
                                 <input type="text" name="name" id="task-name" class="form-control" value="{{ old('task') }}">
                             </div>
                         </div>
 
                         <!-- Add Task Button -->
                         <div class="form-group">
-                            <div class="col-sm-offset-3 col-sm-6">
+                            <div class="col-sm-offset-3 col-sm-6 mb-2">
                                 <button class="btn btn-primary" type="submit">Add Task</button>
                             </div>
                         </div>
