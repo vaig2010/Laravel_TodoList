@@ -21,6 +21,11 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/user/{id}/{name}', function ($id, $name) {
-    return 'ID: ' . $id . "NAME: " . $name;
-});
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/tasks', [App\Http\Controllers\TaskController::class, 'index']);
+Route::post('/task', [App\Http\Controllers\TaskController::class, 'store']);
+Route::delete('/task/{task}', [App\Http\Controllers\TaskController::class, 'destroy']);
+Auth::routes();
